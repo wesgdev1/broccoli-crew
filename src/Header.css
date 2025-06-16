@@ -1,0 +1,247 @@
+/* Header Minimalista y Responsive */
+.header {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(120, 119, 198, 0.15);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(120, 119, 198, 0.05) 0%, 
+    rgba(255, 119, 198, 0.03) 50%, 
+    rgba(120, 219, 255, 0.05) 100%
+  );
+  z-index: -1;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+/* Logo - Más pequeño y minimalista */
+.logo-container {
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.header-logo {
+  
+  
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(5.5); /* 1 = normal, >1 = más claro, <1 = más oscuro */
+  transition: all 0.3s ease;
+  animation: logoFloat 6s ease-in-out infinite;
+
+}
+
+.header-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px rgba(120, 119, 198, 0.5));
+}
+
+@keyframes logoFloat {
+  0%, 100% { 
+    transform: translateY(0px);
+    filter: drop-shadow(0 0 8px rgba(120, 119, 198, 0.3));
+  }
+  50% { 
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0 10px rgba(120, 119, 198, 0.4));
+  }
+}
+
+/* Título centrado - Más compacto */
+.title-container {
+  flex: 1;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+  font-weight: 700;
+  margin: 0 0 0.2rem 0;
+  background: linear-gradient(135deg, #7877c6 0%, #ff77c6 50%, #78dbff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.broccoli-emoji {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  margin: 0 0.4rem;
+  animation: float 4s ease-in-out infinite;
+  display: inline-block;
+  filter: drop-shadow(0 0 6px rgba(120, 219, 255, 0.3));
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-3px) rotate(1deg); }
+}
+
+.subtitle {
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.3;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Espaciador invisible */
+.header-spacer {
+  width: 45px;
+  flex-shrink: 0;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.8rem 0;
+  }
+  
+  .header-content {
+    padding: 0 1rem;
+    min-height: 50px;
+  }
+  
+  .header-logo {
+    height: 38px;
+  }
+  
+  .title {
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+  }
+  
+  .broccoli-emoji {
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    margin: 0 0.3rem;
+  }
+  
+  .subtitle {
+    font-size: clamp(0.65rem, 2.2vw, 0.8rem);
+  }
+  
+  .header-spacer {
+    width: 38px;
+  }
+}
+
+/* Responsive - Móvil */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.6rem 0;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0 0.8rem;
+    min-height: auto;
+  }
+  
+  .header-spacer {
+    display: none;
+  }
+  
+  .logo-container {
+    order: 1;
+  }
+  
+  .title-container {
+    order: 2;
+    padding: 0;
+  }
+  
+  .header-logo {
+    height: 35px;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 0.1rem;
+  }
+  
+  .broccoli-emoji {
+    font-size: 1rem;
+    margin: 0 0.25rem;
+  }
+  
+  .subtitle {
+    font-size: 0.7rem;
+    opacity: 0.8;
+    max-width: 280px;
+  }
+}
+
+/* Móvil muy pequeño */
+@media (max-width: 360px) {
+  .header-content {
+    padding: 0 0.6rem;
+    gap: 0.6rem;
+  }
+  
+  .header-logo {
+    height: 32px;
+  }
+  
+  .title {
+    font-size: 1.1rem;
+  }
+  
+  .broccoli-emoji {
+    font-size: 0.9rem;
+    margin: 0 0.2rem;
+  }
+  
+  .subtitle {
+    font-size: 0.65rem;
+    max-width: 250px;
+  }
+}
+
+/* Efectos de scroll */
+.header.scrolled {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom-color: rgba(120, 119, 198, 0.25);
+}
+
+/* Animación de entrada */
+.header {
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} 

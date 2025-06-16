@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import Header from "./Header";
+import MemberModal from "./MemberModal";
 import VideosSection from "./VideosSection";
 import CountdownSection from "./CountdownSection";
 
@@ -48,7 +50,8 @@ function App() {
         press: "80kg",
         experiencia: "5 años",
       },
-      image: "https://picsum.photos/800/800?random=2",
+      image:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750086826/erasebg-transformed_irpydk.png",
       gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
       description:
         "Instructora imparable y emprendedora nata. Enseña con pasión y entrena con fuego. Su energía contagia a todo el crew.",
@@ -344,30 +347,7 @@ function App() {
       {/* Mira para hover */}
       {hoveredMember && <div className="fullscreen-crosshair" />}
 
-      <header className="header">
-        <div className="header-content">
-          <div className="logo-container">
-            <img
-              src="https://res.cloudinary.com/dppqkypts/image/upload/v1750038487/310c5914-a4fa-47b0-a225-cb4355700a44_dihuv7.png"
-              alt="BROCCOLI CREW Logo"
-              className="header-logo"
-            />
-          </div>
-
-          <div className="title-container">
-            <h1 className="title">
-              <span className="broccoli-emoji">🥦</span>
-              BROCCOLI CREW
-              <span className="broccoli-emoji">🥦</span>
-            </h1>
-            <p className="subtitle">
-              Amigos del gym, unidos por la fuerza y diferentes profesiones
-            </p>
-          </div>
-
-          <div className="header-spacer"></div>
-        </div>
-      </header>
+      <Header />
 
       <main className="main-content">
         <div className="team-grid">
@@ -451,74 +431,12 @@ function App() {
       {/* Sección de Contador */}
       <CountdownSection />
 
-      {selectedMember && (
-        <div className="modal-overlay" onClick={() => setSelectedMember(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="close-button"
-              onClick={() => setSelectedMember(null)}
-            >
-              ✕
-            </button>
-            <div className="modal-body">
-              <img
-                src={selectedMember.image}
-                alt={selectedMember.name}
-                className="modal-image"
-              />
-              <div className="modal-info">
-                <h2>{selectedMember.name}</h2>
-                <p className="modal-nickname">"{selectedMember.nickname}"</p>
-
-                {/* Redes sociales */}
-                <div className="social-links">
-                  {Object.entries(selectedMember.social).map(
-                    ([platform, username]) => (
-                      <a
-                        key={platform}
-                        href={getSocialLink(platform, username)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`social-link ${platform}`}
-                        title={`${platform}: ${username}`}
-                      ></a>
-                    )
-                  )}
-                </div>
-
-                <div className="modal-details">
-                  <p>
-                    <strong>Profesión:</strong> {selectedMember.profession}
-                  </p>
-                  <p>
-                    <strong>Especialidad:</strong> {selectedMember.specialty}
-                  </p>
-                  <p>
-                    <strong>Rol en el gym:</strong> {selectedMember.gymRole}
-                  </p>
-                  <p>
-                    <strong>Peso Muerto:</strong>{" "}
-                    {selectedMember.gymStats.pesoMuerto}
-                  </p>
-                  <p>
-                    <strong>Sentadilla:</strong>{" "}
-                    {selectedMember.gymStats.sentadilla}
-                  </p>
-                  <p>
-                    <strong>Press de Banca:</strong>{" "}
-                    {selectedMember.gymStats.press}
-                  </p>
-                  <p>
-                    <strong>Experiencia:</strong>{" "}
-                    {selectedMember.gymStats.experiencia}
-                  </p>
-                  <p className="description">{selectedMember.description}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Modal del miembro */}
+      <MemberModal
+        member={selectedMember}
+        onClose={() => setSelectedMember(null)}
+        getSocialLink={getSocialLink}
+      />
 
       <footer className="footer">
         <p>💪 BROCCOLI CREW - Más que un equipo, una familia 💪</p>

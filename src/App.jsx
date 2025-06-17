@@ -191,7 +191,8 @@ function App() {
       id: 1,
       name: "Welinton",
       specialty: "Desarrollo Web & Apps",
-      avatar: "https://picsum.photos/120/120?random=1",
+      avatar:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750128893/welinton_jbu4s9.png",
       description:
         "Desarrollo de páginas web, aplicaciones móviles y sistemas personalizados. Transformo ideas en código funcional.",
       packages: [
@@ -200,13 +201,14 @@ function App() {
         { name: "App Móvil", price: "$3.200.000" },
         { name: "Sistema Personalizado", price: "$4.500.000" },
       ],
-      whatsapp: "+573001234567",
+      whatsapp: "+573208719438",
     },
     {
       id: 2,
       name: "Mafer",
       specialty: "Entrenamiento Personal & Fitness",
-      avatar: "https://picsum.photos/120/120?random=2",
+      avatar:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750128892/mafer_ytkzzr.png",
       description:
         "Planes de entrenamiento personalizados, nutrición deportiva y coaching fitness para alcanzar tus objetivos.",
       packages: [
@@ -215,13 +217,14 @@ function App() {
         { name: "Plan Nutricional", price: "$120.000" },
         { name: "Coaching Completo 3 meses", price: "$400.000" },
       ],
-      whatsapp: "+573001234568",
+      whatsapp: "+573232202617",
     },
     {
       id: 3,
       name: "Sergio",
       specialty: "Técnica de Entrenamiento",
-      avatar: "https://picsum.photos/120/120?random=3",
+      avatar:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750128892/sergio_yvyiyz.png",
       description:
         "Corrección de técnica, programas de fuerza avanzados y preparación para competencias deportivas.",
       packages: [
@@ -230,13 +233,14 @@ function App() {
         { name: "Preparación Competencia", price: "$600.000" },
         { name: "Mentoría Mensual", price: "$200.000" },
       ],
-      whatsapp: "+573001234569",
+      whatsapp: "+573204778493",
     },
     {
       id: 4,
       name: "Nelson",
       specialty: "Asesoría Financiera & Cambios",
-      avatar: "https://picsum.photos/120/120?random=4",
+      avatar:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750128892/nelson_edb5zd.png",
       description:
         "Consultoría en inversiones, cambio de divisas y planificación financiera personal y empresarial.",
       packages: [
@@ -251,7 +255,8 @@ function App() {
       id: 5,
       name: "Nicolas",
       specialty: "Marketing Digital & Contenido",
-      avatar: "https://picsum.photos/120/120?random=5",
+      avatar:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750128892/nico_empn1r.png",
       description:
         "Estrategias de redes sociales, creación de contenido viral y crecimiento de marca personal.",
       packages: [
@@ -260,13 +265,14 @@ function App() {
         { name: "Creación de Contenido", price: "$200.000/mes" },
         { name: "Marca Personal Completa", price: "$800.000" },
       ],
-      whatsapp: "+573001234571",
+      whatsapp: "+573017595288",
     },
     {
       id: 6,
       name: "Winder",
       specialty: "Entrenamiento de Alto Rendimiento",
-      avatar: "https://picsum.photos/120/120?random=6",
+      avatar:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750128892/winder_kgepph.png",
       description: "Programas de élite para atletas y  periodización avanzada.",
       packages: [
         { name: "Evaluación Atlética", price: "$150.000" },
@@ -274,13 +280,14 @@ function App() {
         { name: "Periodización Anual", price: "$1.200.000" },
         { name: "Coaching Profesional", price: "$300.000/mes" },
       ],
-      whatsapp: "+573001234572",
+      whatsapp: "+573002525861",
     },
     {
       id: 7,
       name: "Oscar",
       specialty: "Fotografía & Edición Visual",
-      avatar: "https://picsum.photos/120/120?random=7",
+      avatar:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750128892/oscar_acemub.png",
       description:
         "Sesiones fotográficas profesionales, edición avanzada y producción de contenido visual de alta calidad.",
       packages: [

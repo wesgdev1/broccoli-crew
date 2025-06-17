@@ -4,6 +4,7 @@ import Header from "./Header";
 import MemberModal from "./MemberModal";
 import VideosSection from "./VideosSection";
 import CountdownSection from "./CountdownSection";
+import ProductsSection from "./ProductsSection";
 
 function App() {
   const [selectedMember, setSelectedMember] = useState(null);
@@ -315,19 +316,6 @@ function App() {
     return baseUrls[platform] || "#";
   };
 
-  // Función para obtener el icono de cada red social
-  const getSocialIcon = (platform) => {
-    const icons = {
-      whatsapp: "💬",
-      instagram: "📷",
-      facebook: "👥",
-      twitter: "🐦",
-      linkedin: "💼",
-      tiktok: "🎵",
-    };
-    return icons[platform] || "🔗";
-  };
-
   // Función para generar mensaje de WhatsApp
   const getWhatsAppMessage = (service) => {
     const message = `¡Hola ${service.name}! 👋 Me interesa conocer más sobre tus servicios de ${service.specialty}. ¿Podrías darme más información sobre los paquetes disponibles?`;
@@ -440,6 +428,9 @@ function App() {
 
       {/* Sección de Contador */}
       <CountdownSection />
+
+      {/* Sección de Productos */}
+      <ProductsSection />
 
       {/* Modal del miembro */}
       <MemberModal

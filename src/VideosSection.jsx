@@ -8,78 +8,97 @@ const VideosSection = () => {
   const videos = [
     {
       id: 1,
+      title: "Día de tren superior con el Broccoli Crew",
+      description: "Entrenamiento de tren superior con el Broccoli Crew",
+      thumbnail:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750115339/erasebg-transformed_x8y9sv.png",
+      duration: "05:24",
+      views: "-",
+      date: "-",
+      youtubeId: "66g0OYuQQU4", // ID de ejemplo de YouTube
+      members: ["Nelson", "Sergio", "Mafer", "Oscar", "Nicolas"],
+      category: "Tren superior",
+    },
+    {
+      id: 2,
       title: "Día de Piernas Épico - Welinton & Sergio",
       description:
         "Rutina completa de piernas con técnica perfecta. Sentadillas, peso muerto y más.",
-      thumbnail: "https://picsum.photos/400/225?random=101",
-      duration: "12:45",
-      views: "2.3K",
-      date: "Hace 3 días",
+      thumbnail:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750114970/ChatGPT_Image_16_jun_2025_06_01_17_p.m._fhupk1.png",
+      duration: "-",
+      views: "-",
+      date: "-",
       youtubeId: "dQw4w9WgXcQ", // ID de ejemplo de YouTube
       members: ["Welinton", "Sergio"],
       category: "Piernas",
     },
     {
-      id: 2,
+      id: 3,
       title: "Mafer Enseña: Técnica de Press de Banca",
       description:
         "La instructora Mafer nos muestra la técnica correcta para el press de banca.",
-      thumbnail: "https://picsum.photos/400/225?random=102",
-      duration: "8:30",
-      views: "1.8K",
-      date: "Hace 5 días",
+      thumbnail:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750114970/ChatGPT_Image_16_jun_2025_06_01_17_p.m._fhupk1.png",
+      duration: "-",
+      views: "-",
+      date: "-",
       youtubeId: "dQw4w9WgXcQ",
       members: ["Mafer"],
       category: "Técnica",
     },
     {
-      id: 3,
+      id: 4,
       title: "Winder vs Nelson: Desafío de Peso Muerto",
       description:
         "Competencia épica entre dos titanes del BROCCOLI CREW. ¿Quién levantará más?",
-      thumbnail: "https://picsum.photos/400/225?random=103",
-      duration: "15:20",
-      views: "4.1K",
-      date: "Hace 1 semana",
+      thumbnail:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750114970/ChatGPT_Image_16_jun_2025_06_01_17_p.m._fhupk1.png",
+      duration: "-",
+      views: "-",
+      date: "-",
       youtubeId: "dQw4w9WgXcQ",
       members: ["Winder", "Nelson"],
       category: "Competencia",
     },
     {
-      id: 4,
+      id: 5,
       title: "Rutina de Espalda con Nicolas",
       description:
         "El influencer Nicolas comparte su rutina favorita para desarrollar una espalda masiva.",
-      thumbnail: "https://picsum.photos/400/225?random=104",
-      duration: "10:15",
-      views: "3.2K",
-      date: "Hace 1 semana",
+      thumbnail:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750114970/ChatGPT_Image_16_jun_2025_06_01_17_p.m._fhupk1.png",
+      duration: "-",
+      views: "-",
+      date: "-",
       youtubeId: "dQw4w9WgXcQ",
       members: ["Nicolas"],
       category: "Espalda",
     },
     {
-      id: 5,
+      id: 6,
       title: "Oscar Documenta: Un Día Completo en el Gym",
       description:
         "Detrás de cámaras con Oscar mientras documenta un día típico del BROCCOLI CREW.",
-      thumbnail: "https://picsum.photos/400/225?random=105",
-      duration: "18:45",
-      views: "5.7K",
-      date: "Hace 2 semanas",
+      thumbnail:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750114970/ChatGPT_Image_16_jun_2025_06_01_17_p.m._fhupk1.png",
+      duration: "-",
+      views: "-",
+      date: "-",
       youtubeId: "dQw4w9WgXcQ",
       members: ["Oscar", "Todo el Crew"],
       category: "Vlog",
     },
     {
-      id: 6,
+      id: 7,
       title: "Cardio Extremo con Mafer y Sergio",
       description:
         "Sesión de cardio de alta intensidad que te dejará sin aliento. ¡Prepárate!",
-      thumbnail: "https://picsum.photos/400/225?random=106",
-      duration: "25:30",
-      views: "2.9K",
-      date: "Hace 2 semanas",
+      thumbnail:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750114970/ChatGPT_Image_16_jun_2025_06_01_17_p.m._fhupk1.png",
+      duration: "-",
+      views: "-",
+      date: "-",
       youtubeId: "dQw4w9WgXcQ",
       members: ["Mafer", "Sergio"],
       category: "Cardio",
@@ -169,7 +188,7 @@ const VideosSection = () => {
 
         <div className="videos-footer">
           <a
-            href="https://youtube.com/@broccoolicrew"
+            href="https://www.youtube.com/@mafercillapilla"
             target="_blank"
             rel="noopener noreferrer"
             className="youtube-channel-button"

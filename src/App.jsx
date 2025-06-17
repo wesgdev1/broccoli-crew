@@ -99,7 +99,8 @@ function App() {
         press: "110kg",
         experiencia: "4 años",
       },
-      image: "https://picsum.photos/800/800?random=4",
+      image:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750116240/Captura_de_pantalla_2025-06-16_182207_vystqz.png",
       gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
       description:
         "Maneja divisas como maneja las pesas. Cada intercambio es calculado, cada rep es una inversión en su físico.",
@@ -170,7 +171,8 @@ function App() {
         press: "115kg",
         experiencia: "3 años",
       },
-      image: "https://picsum.photos/800/800?random=7",
+      image:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750116461/Captura_de_pantalla_2025-06-16_182712_xzlilt.png",
       gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
       description:
         "Captura la esencia del crew con su lente. Cada foto cuenta una historia, cada edición es una obra de arte. Músculo y creatividad unidos.",
@@ -265,8 +267,7 @@ function App() {
       name: "Winder",
       specialty: "Entrenamiento de Alto Rendimiento",
       avatar: "https://picsum.photos/120/120?random=6",
-      description:
-        "Programas de élite para atletas, periodización avanzada y optimización del rendimiento deportivo.",
+      description: "Programas de élite para atletas y  periodización avanzada.",
       packages: [
         { name: "Evaluación Atlética", price: "$150.000" },
         { name: "Programa de Élite", price: "$500.000" },

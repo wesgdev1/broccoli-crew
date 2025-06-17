@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+/* Optimizaciones de rendimiento global */
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .app {
   min-height: 100vh;
   background: #0a0a0a;
@@ -44,6 +55,8 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+  /*centrar elementos*/
+
 }
 
 /* Member Cards - Estilo profesional compacto */
@@ -53,7 +66,7 @@
   border-radius: 16px;
   padding: 1.5rem;
   cursor: crosshair;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: visible;
   backdrop-filter: blur(5px);
@@ -63,6 +76,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  will-change: transform;
+  contain: layout style;
 }
 
 /* Fondo de pantalla para hover - Ajustado para imágenes verticales */
@@ -101,14 +116,13 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: translate3d(-50%, -50%, 0) scale3d(1.2, 1.2, 1);
   font-size: 5rem;
   font-weight: 900;
   color: #ffffff;
   text-shadow: 
-    0 0 40px rgba(255, 0, 0, 1),
-    4px 4px 8px rgba(0, 0, 0, 0.9),
-    0 0 80px rgba(255, 0, 0, 0.8);
+    0 0 40px rgba(255, 0, 0, 0.8),
+    4px 4px 8px rgba(0, 0, 0, 0.9);
   z-index: 1003;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -116,6 +130,7 @@
   font-family: 'Inter', sans-serif;
   text-align: center;
   animation: nameGlow 2s ease-in-out infinite alternate;
+  will-change: text-shadow;
 }
 
 .fullscreen-crosshair {
@@ -126,40 +141,32 @@
   height: 50px;
   border: 3px solid #ff0000;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0);
   opacity: 0.9;
   z-index: 1002;
   pointer-events: none;
-  box-shadow: 
-    0 0 0 10px rgba(255, 0, 0, 0.1),
-    inset 0 0 0 15px rgba(255, 0, 0, 0.1);
+  box-shadow: 0 0 0 10px rgba(255, 0, 0, 0.1);
   animation: targetPulse 1.2s infinite;
+  will-change: transform, opacity;
 }
 
 @keyframes targetPulse {
   0%, 100% { 
-    border-width: 3px;
-    box-shadow: 
-      0 0 0 10px rgba(255, 0, 0, 0.1),
-      inset 0 0 0 15px rgba(255, 0, 0, 0.1),
-      0 0 0 0 rgba(255, 0, 0, 0.8);
+    transform: scale3d(1, 1, 1);
+    opacity: 0.9;
   }
   50% { 
-    border-width: 4px;
-    box-shadow: 
-      0 0 0 10px rgba(255, 0, 0, 0.2),
-      inset 0 0 0 15px rgba(255, 0, 0, 0.2),
-      0 0 0 20px rgba(255, 0, 0, 0);
+    transform: scale3d(1.1, 1.1, 1);
+    opacity: 0.7;
   }
 }
 
 .member-card:hover {
-  transform: translateY(-8px) scale(1.03);
+  transform: translate3d(0, -8px, 0) scale3d(1.03, 1.03, 1);
   border-color: rgba(255, 0, 0, 0.6);
   box-shadow: 
-    0 15px 35px rgba(255, 0, 0, 0.15),
-    0 0 0 1px rgba(255, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 8px 20px rgba(255, 0, 0, 0.12),
+    0 0 0 1px rgba(255, 0, 0, 0.2);
   cursor: crosshair;
   z-index: 1001;
 }
@@ -171,10 +178,11 @@
   margin: 0 auto 1rem;
   position: relative;
   z-index: 3;
-  transition: all 0.4s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: transparent;
   border-radius: 16px;
   overflow: hidden;
+  will-change: transform;
 }
 
 .member-image img {
@@ -184,41 +192,32 @@
   object-fit: cover;
   object-position: center top;
   display: block;
-  transition: all 0.4s ease;
-  filter: 
-    contrast(1.1)
-    brightness(1.0)
-    saturate(1.1);
+  transition: transform 0.3s ease;
+  filter: contrast(1.1) brightness(1.0) saturate(1.1);
+  will-change: transform;
 }
 
 .member-card:hover .member-image {
   box-shadow: 
-    0 0 0 3px rgba(255, 0, 0, 0.4),
-    0 0 25px rgba(255, 0, 0, 0.5);
-  transform: scale(1.05);
+    0 0 0 2px rgba(255, 0, 0, 0.4),
+    0 0 15px rgba(255, 0, 0, 0.3);
+  transform: scale3d(1.05, 1.05, 1);
 }
 
 .member-card:hover .member-image img {
-  transform: scale(1.05);
-  filter: 
-    
- 
-   
-    drop-shadow(0 0 10px rgba(255, 0, 0, 0.4));
+  transform: scale3d(1.05, 1.05, 1);
 }
 
 @keyframes nameGlow {
   from {
     text-shadow: 
-      0 0 40px rgba(255, 0, 0, 1),
-      4px 4px 8px rgba(0, 0, 0, 0.9),
-      0 0 80px rgba(255, 0, 0, 0.8);
+      0 0 40px rgba(255, 0, 0, 0.8),
+      4px 4px 8px rgba(0, 0, 0, 0.9);
   }
   to {
     text-shadow: 
       0 0 60px rgba(255, 0, 0, 1),
-      4px 4px 8px rgba(0, 0, 0, 0.9),
-      0 0 120px rgba(255, 0, 0, 1);
+      4px 4px 8px rgba(0, 0, 0, 0.9);
   }
 }
 
@@ -226,12 +225,13 @@
   text-align: center;
   position: relative;
   z-index: 3;
-  transition: all 0.4s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  will-change: opacity, transform;
 }
 
 .member-card:hover .member-info {
   opacity: 0.1;
-  transform: scale(0.8);
+  transform: scale3d(0.8, 0.8, 1);
 }
 
 .member-info h3 {
@@ -751,8 +751,10 @@
   padding: 2rem;
   position: relative;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(10px);
+  will-change: transform;
+  contain: layout style;
 }
 
 .service-card::before {
@@ -767,12 +769,11 @@
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
+  transform: translate3d(0, -8px, 0);
   border-color: rgba(120, 119, 198, 0.4);
   box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(120, 119, 198, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 15px 30px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(120, 119, 198, 0.2);
 }
 
 .service-header {
@@ -848,19 +849,20 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   text-decoration: none;
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  will-change: transform;
 }
 
 .cotizar-button:hover {
   background: linear-gradient(135deg, #128C7E, #25D366);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
 }
 
 .cotizar-button::before {

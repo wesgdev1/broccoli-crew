@@ -6,7 +6,7 @@ function Header() {
       <div className="header-content">
         <div className="logo-container">
           <img
-            src="https://res.cloudinary.com/dppqkypts/image/upload/v1750038487/310c5914-a4fa-47b0-a225-cb4355700a44_dihuv7.png"
+            src="https://res.cloudinary.com/dndit9q1h/image/upload/v1750130523/ChatGPT_Image_16_jun_2025_10_21_48_p.m._xaisvj.png"
             alt="BROCCOLI CREW Logo"
             className="header-logo"
           />

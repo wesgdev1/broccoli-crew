@@ -13,32 +13,6 @@ function App() {
   const broccoliCrew = [
     {
       id: 1,
-      name: "Welinton",
-      nickname: "El Líder Tech",
-      profession: "Desarrollador",
-      specialty: "Programación y Tecnología",
-      gymRole: "Motivador del equipo",
-      gymStats: {
-        pesoMuerto: "180kg",
-        sentadilla: "150kg",
-        press: "120kg",
-        experiencia: "3 años",
-      },
-      image:
-        "https://res.cloudinary.com/dppqkypts/image/upload/v1750023534/image-removebg-preview_1_ub6txp.png",
-      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      description:
-        "El cerebro tecnológico del crew. Mientras programa el futuro, forja su cuerpo con la misma disciplina que sus líneas de código.",
-      social: {
-        whatsapp: "+1234567890",
-        instagram: "welinton_dev",
-        facebook: "welinton.developer",
-        linkedin: "welinton-developer",
-        twitter: "welinton_tech",
-      },
-    },
-    {
-      id: 2,
       name: "Mafer",
       nickname: "La Boss",
       profession: "Instructora y Emprendedora",
@@ -63,7 +37,7 @@ function App() {
       },
     },
     {
-      id: 3,
+      id: 2,
       name: "Sergio",
       nickname: "El Maestro",
       profession: "Instructor",
@@ -84,6 +58,32 @@ function App() {
         whatsapp: "+1234567892",
         instagram: "sergio_trainer",
         facebook: "sergio.instructor",
+      },
+    },
+    {
+      id: 3,
+      name: "Welinton",
+      nickname: "El Líder Tech",
+      profession: "Desarrollador",
+      specialty: "Programación y Tecnología",
+      gymRole: "Motivador del equipo",
+      gymStats: {
+        pesoMuerto: "180kg",
+        sentadilla: "150kg",
+        press: "120kg",
+        experiencia: "3 años",
+      },
+      image:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750130247/Screenshot_20250616_183433_Gallery_zmtigk.png",
+      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      description:
+        "El cerebro tecnológico del crew. Mientras programa el futuro, forja su cuerpo con la misma disciplina que sus líneas de código.",
+      social: {
+        whatsapp: "+1234567890",
+        instagram: "welinton_dev",
+        facebook: "welinton.developer",
+        linkedin: "welinton-developer",
+        twitter: "welinton_tech",
       },
     },
     {
@@ -123,7 +123,8 @@ function App() {
         press: "125kg",
         experiencia: "2 años",
       },
-      image: "https://picsum.photos/800/800?random=5",
+      image:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750130280/Captura_de_pantalla_2025-06-16_221619_sfrqhn.png",
       gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
       description:
         "Inspira a miles con su contenido. Su feed está lleno de motivación y su físico habla por sí solo. Influencia positiva pura.",
@@ -148,7 +149,8 @@ function App() {
         press: "160kg",
         experiencia: "10 años",
       },
-      image: "https://picsum.photos/800/800?random=6",
+      image:
+        "https://res.cloudinary.com/dndit9q1h/image/upload/v1750130246/Screenshot_20250616_221003_Instagram_eomltw.png",
       gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
       description:
         "Instructor de élite con técnica impecable. Su experiencia transforma principiantes en atletas. La fuerza es su lenguaje.",
